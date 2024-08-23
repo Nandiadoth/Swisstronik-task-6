@@ -29,7 +29,7 @@ async function main() {
   );
 
   console.log(
-    `Proxy contract address: ${proxy.target} <- copy that for "the deployed proxy contract address"`
+    `Proxy contract address: ${proxy.target} 👈 This is the deployed proxy contract address`
   );
 
   // contract 2
@@ -52,7 +52,7 @@ async function main() {
   await upgrade.wait();
 
   console.log(
-    `Response: https://explorer-evm.testnet.swisstronik.com/tx/${upgrade.hash} <- copy that for "the link to the contract implementation replacement transaction"`
+    `Response: https://explorer-evm.testnet.swisstronik.com/tx/${upgrade.hash} 👈 This is the URL of the contract implementation replacement transaction`
   );
 
   // await run("verify:verify", {
