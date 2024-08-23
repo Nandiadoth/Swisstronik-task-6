@@ -1,5 +1,7 @@
 # Swisstronik Testnet Technical Task 06
 
+Watch my video guide: https://youtu.be/anhwUfdI7xA
+
 ## 1. Set up your GitHub Codespace
 
 Create a new [Github Codespace](https://github.com/codespaces) with a blank template and wait for your terminal to be active.
