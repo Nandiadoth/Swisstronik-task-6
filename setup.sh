@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the repository URL
-REPO_URL="https://github.com/chinadizi/bunkie06"
+REPO_URL="https://github.com/cryptobunkie/swtr06"
 
 # Create a temporary directory to clone the repository
 TEMP_DIR=$(mktemp -d)
