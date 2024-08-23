@@ -11,7 +11,7 @@ Paste this code in your terminal and hit your ENTER key.
 ```bash
 wget https://raw.githubusercontent.com/cryptobunkie/swtr06/codespace-literate-space-broccoli-4jg96x59qpv5cq4pg/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
-Provide your private key when required.
+Provide your private key when required for contract deployment and provide the deployed contract address for verification.
 
 ## 3. Publish your codespace to a new GitHub repository
 
