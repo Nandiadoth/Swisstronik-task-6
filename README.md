@@ -9,7 +9,7 @@ Create a new [Github Codespace](https://github.com/codespaces) with a blank temp
 Paste this code in your terminal and hit your ENTER key.
 
 ```bash
-wget https://raw.githubusercontent.com/chinadizi/bunkie06/codespace-humble-eureka-q69j6wrjr43wjq/setup.sh && chmod +x setup.sh && ./setup.sh
+wget https://raw.githubusercontent.com/cryptobunkie/swtr06/codespace-literate-space-broccoli-4jg96x59qpv5cq4pg/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 Provide your private key when required.
 
