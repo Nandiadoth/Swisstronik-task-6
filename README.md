@@ -1,4 +1,4 @@
-# Swisstronik Testnet Task 06
+# Swisstronik Testnet Technical Task 06
 
 ## 1. Set up your GitHub Codespace
 
