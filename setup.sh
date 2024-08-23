@@ -49,8 +49,10 @@ echo "Removing the private key from the .env file..."
 sed -i 's|PRIVATE_KEY="[^"]*"|PRIVATE_KEY=""|g' .env
 
 # Final output
+echo ""
 echo "👍👍 ALL DONE 👍👍"
 echo ""
 echo "Credit to AnonID.TOP for laying the groundwork 👏👏"
 echo ""
 echo "Join my Telegram channel for more updates: T.me/CryptoBunkie"
+echo ""
