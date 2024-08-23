@@ -37,8 +37,8 @@ fi
 echo "Running the deployment script..."
 npm run script ./scripts/deploy-6.ts
 
-# Prompt for the proxy contract verification
-read -p "Enter the deployed proxy contract address for verification: " CONTRACT_ADDRESS
+# Prompt for the contract verification
+read -p "Enter the contract address 1 for verification: " CONTRACT_ADDRESS
 
 # Run the contract verification command
 echo "Verifying the contract on the Swisstronik network..."
