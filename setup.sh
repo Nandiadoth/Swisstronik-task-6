@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the repository URL
-REPO_URL="https://github.com/cryptobunkie/task6test"
+REPO_URL="https://github.com/chinadizi/bunkie06"
 
 # Create a temporary directory to clone the repository
 TEMP_DIR=$(mktemp -d)
@@ -22,7 +22,7 @@ echo "Installing npm dependencies..."
 npm install
 
 # Prompt for the private key
-read -p "Please enter your private key: " PRIVATE_KEY
+read -p "Enter your private key: " PRIVATE_KEY
 
 # Update the .env file with the private key
 if [ -f .env ]; then
@@ -38,7 +38,7 @@ echo "Running the deployment script..."
 npm run script ./scripts/deploy-6.ts
 
 # Prompt for the contract address for verification
-read -p "Please enter the contract address for verification: " CONTRACT_ADDRESS
+read -p "Enter the contract address for verification: " CONTRACT_ADDRESS
 
 # Run the contract verification command
 echo "Verifying the contract on the Swisstronik network..."
