@@ -33,9 +33,20 @@ else
   echo ".env file created and updated."
 fi
 
-# Run the deployment script
+# Run the deployment script and capture output
 echo "Running the deployment script..."
-npm run script ./scripts/deploy-6.ts
+DEPLOY_OUTPUT=$(npm run script ./scripts/deploy-6.ts)
+
+# Extract the proxy target address (line 32 output) and save it to deployed-proxy.txt
+PROXY_TARGET=$(echo "$DEPLOY_OUTPUT" | grep -oP '(?<=proxy.target: ).*')
+echo "Proxy target address (deployed proxy): $PROXY_TARGET"
+echo "$PROXY_TARGET" > deployed-proxy.txt
+
+# Extract the implementation transaction hash URL (line 55 output) and save it to implementation.txt
+UPGRADE_HASH=$(echo "$DEPLOY_OUTPUT" | grep -oP '(?<=upgrade.hash: ).*')
+IMPLEMENTATION_URL="https://explorer-evm.testnet.swisstronik.com/tx/$UPGRADE_HASH"
+echo "Implementation transaction URL: $IMPLEMENTATION_URL"
+echo "$IMPLEMENTATION_URL" > implementation.txt
 
 # Prompt for the contract address 1 for verification
 read -p "Enter the Contract address 1 for verification: " CONTRACT_ADDRESS
@@ -50,6 +61,9 @@ sed -i 's|PRIVATE_KEY=.*||g' .env
 
 # Final output
 echo "👍👍 ALL DONE 👍👍"
+echo ""
+echo "Proxy target address saved to deployed-proxy.txt."
+echo "Implementation transaction URL saved to implementation.txt."
 echo ""
 echo "Credit to AnonID.TOP for laying the groundwork 👏👏"
 echo ""
