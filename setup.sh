@@ -44,9 +44,9 @@ read -p "Enter the Contract address 1 for verification: " CONTRACT_ADDRESS
 echo "Verifying the contract on the Swisstronik network..."
 npx hardhat verify --network swisstronik --contract contracts/Hello_swtr.sol:Swisstronik "$CONTRACT_ADDRESS"
 
-# Remove the private key from the .env file
+# Remove the private key inside the quotation marks in the .env file
 echo "Removing the private key from the .env file..."
-sed -i 's|PRIVATE_KEY=.*||g' .env
+sed -i 's|PRIVATE_KEY="[^"]*"|PRIVATE_KEY=""|g' .env
 
 # Final output
 echo "👍👍 ALL DONE 👍👍"
